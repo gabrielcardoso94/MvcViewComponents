@@ -1,0 +1,32 @@
+﻿@model src.Models.Entities.Produto
+
+@{
+    ViewData["Title"] = "Produtos";
+}
+
+<div class="shadow-teste p-3">
+    <vc:lista-produtos></vc:lista-produtos>
+</div>
+
+<hr />
+
+<p><h3>Novo produto</h3></p>
+
+<div class="col-md-5">
+    <form asp-action="Index">
+        <div class="mb-3">
+            <label asp-for="Nome" class="form-label"></label>
+            <input asp-for="Nome" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Quantidade" class="form-label"></label>
+            <input asp-for="Quantidade" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Valor" class="form-label"></label>
+            <input asp-for="Valor" class="form-control" />
+        </div>
+
+        <input type="submit" class="btn btn-outline-dark" />
+    </form>
+</div>
